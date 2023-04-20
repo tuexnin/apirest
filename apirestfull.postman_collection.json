@@ -1,0 +1,983 @@
+{
+	"info": {
+		"_postman_id": "ba5690bd-feb0-481d-90c5-859a5498f927",
+		"name": "apirestfull",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20468265"
+	},
+	"item": [
+		{
+			"name": "APIREST",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - SELECCIONAR DATO ESPECIFICO ",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "q9V;rE=:eYJa:Wwt.)8/hfA,n%G$=/",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/ejemplo?select=*",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"ejemplo"
+					],
+					"query": [
+						{
+							"key": "linkTo",
+							"value": "nombre,estado",
+							"disabled": true
+						},
+						{
+							"key": "equalTo",
+							"value": "edwin_1",
+							"disabled": true
+						},
+						{
+							"key": "rel",
+							"value": "country,countrylanguage",
+							"disabled": true
+						},
+						{
+							"key": "type",
+							"value": "Code,CountryCode",
+							"disabled": true
+						},
+						{
+							"key": "select",
+							"value": "*"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - FILTRO DE UN SOLO VALOR",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "q9V;rE=:eYJa:Wwt.)8/hfA,n%G$=/",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/ejemplo?select=nombre,dni&linkTo=nombre&equalTo=edwin",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"ejemplo"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "nombre,dni"
+						},
+						{
+							"key": "linkTo",
+							"value": "nombre"
+						},
+						{
+							"key": "equalTo",
+							"value": "edwin"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - FILTRO CON VARIOS PARAMETROS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "q9V;rE=:eYJa:Wwt.)8/hfA,n%G$=/",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/ejemplo?select=nombre,dni&linkTo=nombre,estado&equalTo=edwin_1",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"ejemplo"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "nombre,dni"
+						},
+						{
+							"key": "linkTo",
+							"value": "nombre,estado"
+						},
+						{
+							"key": "equalTo",
+							"value": "edwin_1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - ORDENAR DATOS SIN FILTRO",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "q9V;rE=:eYJa:Wwt.)8/hfA,n%G$=/",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/ejemplo?select=*&orderBy=nombre&orderMode=ASC",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"ejemplo"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "*"
+						},
+						{
+							"key": "linkTo",
+							"value": "nombre,estado",
+							"disabled": true
+						},
+						{
+							"key": "equalTo",
+							"value": "edwin_1",
+							"disabled": true
+						},
+						{
+							"key": "orderBy",
+							"value": "nombre"
+						},
+						{
+							"key": "orderMode",
+							"value": "ASC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - ORDENAR DATOS CON FILTROS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "q9V;rE=:eYJa:Wwt.)8/hfA,n%G$=/",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/ejemplo?select=*&linkTo=nombre,estado&equalTo=edwin_1&orderBy=nombre&orderMode=ASC",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"ejemplo"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "*"
+						},
+						{
+							"key": "linkTo",
+							"value": "nombre,estado"
+						},
+						{
+							"key": "equalTo",
+							"value": "edwin_1"
+						},
+						{
+							"key": "orderBy",
+							"value": "nombre"
+						},
+						{
+							"key": "orderMode",
+							"value": "ASC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - LIMITAR DATOS SIN FILTRO",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "q9V;rE=:eYJa:Wwt.)8/hfA,n%G$=/",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/ejemplo?select=*&startAt=0&endAt=4&orderBy=nombre&orderMode=DESC",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"ejemplo"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "*"
+						},
+						{
+							"key": "linkTo",
+							"value": "nombre,estado",
+							"disabled": true
+						},
+						{
+							"key": "equalTo",
+							"value": "edwin_1",
+							"disabled": true
+						},
+						{
+							"key": "startAt",
+							"value": "0"
+						},
+						{
+							"key": "endAt",
+							"value": "4"
+						},
+						{
+							"key": "orderBy",
+							"value": "nombre"
+						},
+						{
+							"key": "orderMode",
+							"value": "DESC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - LIMITAR DATOS CON FILTROS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "q9V;rE=:eYJa:Wwt.)8/hfA,n%G$=/",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/ejemplo?select=*&linkTo=nombre,estado&equalTo=edwin_1&orderBy=nombre&orderMode=ASC",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"ejemplo"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "*"
+						},
+						{
+							"key": "linkTo",
+							"value": "nombre,estado"
+						},
+						{
+							"key": "equalTo",
+							"value": "edwin_1"
+						},
+						{
+							"key": "orderBy",
+							"value": "nombre"
+						},
+						{
+							"key": "orderMode",
+							"value": "ASC"
+						},
+						{
+							"key": "startAt",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - RELACIONES ENTRE TABLAS SIN FILTRO",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "q9V;rE=:eYJa:Wwt.)8/hfA,n%G$=/",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/relations?select=Code,Name&rel=country,countrylanguage&type=Code,CountryCode&orderBy=Name&orderMode=ASC&startAt=0&endAt=10",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"relations"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "Code,Name"
+						},
+						{
+							"key": "linkTo",
+							"value": "nombre,estado",
+							"disabled": true
+						},
+						{
+							"key": "equalTo",
+							"value": "edwin_1",
+							"disabled": true
+						},
+						{
+							"key": "rel",
+							"value": "country,countrylanguage"
+						},
+						{
+							"key": "type",
+							"value": "Code,CountryCode"
+						},
+						{
+							"key": "orderBy",
+							"value": "Name"
+						},
+						{
+							"key": "orderMode",
+							"value": "ASC"
+						},
+						{
+							"key": "startAt",
+							"value": "0"
+						},
+						{
+							"key": "endAt",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - RELACIONES ENTRE TABLAS CON FILTRO",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "q9V;rE=:eYJa:Wwt.)8/hfA,n%G$=/",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/relations?select=*&linkTo=Name&equalTo=Peru&rel=country,countrylanguage&type=Code,CountryCode",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"relations"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "*"
+						},
+						{
+							"key": "linkTo",
+							"value": "Name"
+						},
+						{
+							"key": "equalTo",
+							"value": "Peru"
+						},
+						{
+							"key": "rel",
+							"value": "country,countrylanguage"
+						},
+						{
+							"key": "type",
+							"value": "Code,CountryCode"
+						},
+						{
+							"key": "orderBy",
+							"value": "Name",
+							"disabled": true
+						},
+						{
+							"key": "orderMode",
+							"value": "DESC",
+							"disabled": true
+						},
+						{
+							"key": "startAt",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "endAt",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - BUSQUEDA SIN RELACIONES Y CON FILTROS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "q9V;rE=:eYJa:Wwt.)8/hfA,n%G$=/",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/country?select=*&linkTo=Name&search=ub",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"country"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "*"
+						},
+						{
+							"key": "linkTo",
+							"value": "Name"
+						},
+						{
+							"key": "search",
+							"value": "ub"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - BUSQUEDA CON RELACIONES Y CON FILTROS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "q9V;rE=:eYJa:Wwt.)8/hfA,n%G$=/",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/relations?rel=country,countrylanguage&type=Code,CountryCode&select=*&linkTo=name,language&search= ",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"relations"
+					],
+					"query": [
+						{
+							"key": "rel",
+							"value": "country,countrylanguage"
+						},
+						{
+							"key": "type",
+							"value": "Code,CountryCode"
+						},
+						{
+							"key": "select",
+							"value": "*"
+						},
+						{
+							"key": "linkTo",
+							"value": "name,language"
+						},
+						{
+							"key": "search",
+							"value": " "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - RANGOS CON FILTROS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "q9V;rE=:eYJa:Wwt.)8/hfA,n%G$=/",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/city?select=*&linkTo=ID&between1=1&between2=10&filterTo=ID&inTo=4",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"city"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "*"
+						},
+						{
+							"key": "linkTo",
+							"value": "ID"
+						},
+						{
+							"key": "between1",
+							"value": "1"
+						},
+						{
+							"key": "between2",
+							"value": "10"
+						},
+						{
+							"key": "filterTo",
+							"value": "ID"
+						},
+						{
+							"key": "inTo",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - RANGOS CON FILTROS Y RELACIONES",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "q9V;rE=:eYJa:Wwt.)8/hfA,n%G$=/",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/relations?rel=country,countrylanguage&type=Code,CountryCode&select=*&linkTo=ID&between1=1&between2=10&filterTo=ID&inTo=3",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"relations"
+					],
+					"query": [
+						{
+							"key": "rel",
+							"value": "country,countrylanguage"
+						},
+						{
+							"key": "type",
+							"value": "Code,CountryCode"
+						},
+						{
+							"key": "select",
+							"value": "*"
+						},
+						{
+							"key": "linkTo",
+							"value": "ID"
+						},
+						{
+							"key": "between1",
+							"value": "1"
+						},
+						{
+							"key": "between2",
+							"value": "10"
+						},
+						{
+							"key": "filterTo",
+							"value": "ID"
+						},
+						{
+							"key": "inTo",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST -REGISTRAR DATOS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Njc1Nzc5NTUsImV4cCI6MTY2NzY2NDM1NSwiZGF0YSI6eyJpZCI6IjYiLCJlbWFpbCI6ImVkd2luM0Bob3RtYWlsLmNvbSJ9fQ.GPtUZkDUsUTkcF36aF-7Vtl3Y7EmKHi6LkxaJS9q1sU",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "users",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "apikey",
+						"value": "q9V;rE=:eYJa:Wwt.)8/hfA,n%G$=/",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "elsvis",
+							"type": "text"
+						},
+						{
+							"key": "apellido",
+							"value": "presley",
+							"type": "text"
+						},
+						{
+							"key": "dni",
+							"value": "87654321",
+							"type": "text"
+						},
+						{
+							"key": "direccion",
+							"value": "soralla",
+							"type": "text"
+						},
+						{
+							"key": "telefono",
+							"value": "987654123",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{endpoint}}/ejemplo",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"ejemplo"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjYyMDM3NjQsImV4cCI6MTY2NjI5MDE2NCwiZGF0YSI6eyJpZCI6IjEiLCJlbWFpbCI6ImVkd2luQGhvdG1haWwuY29tIn19.W8BCUgXNv-9xzwzA7rI32OsyL7boMVBkMbSMDaC0SjM",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT - MODIFICAMOS LOS DATOS DE UNA TABLA",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "q9V;rE=:eYJa:Wwt.)8/hfA,n%G$=/",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Njc1Nzc5NTUsImV4cCI6MTY2NzY2NDM1NSwiZGF0YSI6eyJpZCI6IjYiLCJlbWFpbCI6ImVkd2luM0Bob3RtYWlsLmNvbSJ9fQ.GPtUZkDUsUTkcF36aF-7Vtl3Y7EmKHi6LkxaJS9q1sU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "naruto",
+							"type": "text"
+						},
+						{
+							"key": "apellido",
+							"value": "shipudens",
+							"type": "text"
+						},
+						{
+							"key": "dni",
+							"value": "73272657",
+							"type": "text"
+						},
+						{
+							"key": "direccion",
+							"value": "jr las dalias 585",
+							"type": "text"
+						},
+						{
+							"key": "telefono",
+							"value": "987654321",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{endpoint}}/ejemplo?id=5&nameId=id",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"ejemplo"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5"
+						},
+						{
+							"key": "nameId",
+							"value": "id"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE - ELIMINAMOS LOS DATOS DE UNA TABLA",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Njc1Nzc5NTUsImV4cCI6MTY2NzY2NDM1NSwiZGF0YSI6eyJpZCI6IjYiLCJlbWFpbCI6ImVkd2luM0Bob3RtYWlsLmNvbSJ9fQ.GPtUZkDUsUTkcF36aF-7Vtl3Y7EmKHi6LkxaJS9q1sU",
+						"type": "text"
+					},
+					{
+						"key": "apikey",
+						"value": "q9V;rE=:eYJa:Wwt.)8/hfA,n%G$=/",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "naruto",
+							"type": "text"
+						},
+						{
+							"key": "apellido",
+							"value": "shipudens",
+							"type": "text"
+						},
+						{
+							"key": "dni",
+							"value": "73272657",
+							"type": "text"
+						},
+						{
+							"key": "direccion",
+							"value": "jr las dalias 585",
+							"type": "text"
+						},
+						{
+							"key": "telefono",
+							"value": "987654321",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{endpoint}}/ejemplo?id=6&nameId=id",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"ejemplo"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6"
+						},
+						{
+							"key": "nameId",
+							"value": "id"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - REGISTRO DE USUARIO",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Njc1Nzc5NTUsImV4cCI6MTY2NzY2NDM1NSwiZGF0YSI6eyJpZCI6IjYiLCJlbWFpbCI6ImVkd2luM0Bob3RtYWlsLmNvbSJ9fQ.GPtUZkDUsUTkcF36aF-7Vtl3Y7EmKHi6LkxaJS9q1sU",
+						"type": "text"
+					},
+					{
+						"key": "apikey",
+						"value": "q9V;rE=:eYJa:Wwt.)8/hfA,n%G$=/",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "google",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "edwin3@hotmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{endpoint}}/users?register=true",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "register",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - LOGIN DE USUARIO",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "q9V;rE=:eYJa:Wwt.)8/hfA,n%G$=/",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "edwin",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "edwin5@hotmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{endpoint}}/users?login=true",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "login",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
